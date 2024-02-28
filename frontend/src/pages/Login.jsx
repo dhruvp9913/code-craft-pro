@@ -15,7 +15,7 @@ export default function LoginPage() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:3000/api/user/login",
+        "https://code-craft-pro-q348.onrender.com/api/user/login",
         user
       );
 
