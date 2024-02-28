@@ -19,7 +19,7 @@ const OtpVerification = () => {
       console.log(data);
       try {
         // Make the POST request to your API endpoint
-        const response = await axios.post('http://localhost:3000/api/user/otp-verification', data);
+        const response = await axios.post('https://code-craft-pro-q348.onrender.com/api/user/otp-verification', data);
 
         console.log(response.data); // Log the response data
         // You can add further logic here based on the response
