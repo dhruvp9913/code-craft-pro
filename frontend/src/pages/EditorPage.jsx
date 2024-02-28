@@ -62,7 +62,7 @@ const EditorPage = () => {
       // Access the last segment
 
       const response = await fetch(
-        `http://localhost:3000/api/folder/get-all/${workspaceID}`,
+        `https://code-craft-pro-q348.onrender.com/api/folder/get-all/${workspaceID}`,
         {
           method: "GET",
         }
@@ -91,7 +91,7 @@ const getFileData = async(fileID)=> {
 
   try {
     const res = await axios.post(
-      "http://localhost:3000/api/file/get",
+      "https://code-craft-pro-q348.onrender.com/api/file/get",
       {"fileID":fileID}
     );
   // console.log(response.data.file.data);
@@ -105,7 +105,7 @@ const getFileData = async(fileID)=> {
 const saveFileData = async() => {
   try {
     const res = await axios.put(
-      "http://localhost:3000/api/file/save-code/",
+      "https://code-craft-pro-q348.onrender.com/api/file/save-code/",
       {"fileID":selectedFileId, "data": code}
     );
 
@@ -118,7 +118,7 @@ const saveFileData = async() => {
   const deleteCurrFile = async (fileID) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/file/delete/${fileID}`,
+        `https://code-craft-pro-q348.onrender.com/api/file/delete/${fileID}`,
         {
           method: "DELETE",
         }
@@ -196,7 +196,7 @@ const saveFileData = async() => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/folder/add/${workspaceID}`,
+        `https://code-craft-pro-q348.onrender.com/api/folder/add/${workspaceID}`,
         {
           name: formData.name,
           userID: localStorage.getItem("userID"),
@@ -220,7 +220,7 @@ const saveFileData = async() => {
   const handleAddFileSubmit = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/file/add/${selectedFolderId}`,
+        `https://code-craft-pro-q348.onrender.com/api/file/add/${selectedFolderId}`,
         {
           name: formData.name,
           userID: localStorage.getItem("userID"),
